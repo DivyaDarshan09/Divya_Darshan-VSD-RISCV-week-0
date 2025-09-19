@@ -1,5 +1,14 @@
 # 🛠️ Task 2 - Tool Installation and Setup  
 
+## 🎯 Objective  
+To install and verify the essential tools required for the **RISC-V SoC Tapeout project**:  
+- **Icarus Verilog (iverilog)**  
+- **GTKWave**  
+- **Yosys**  
+
+---
+
+
 ## 🌐 Oracle Virtual Machine  
 Download Link: [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)  
 
@@ -13,14 +22,6 @@ Download Link: [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
 | HDD              | 50 GB             |
 | OS               | Ubuntu 20.04+     |
 | CPU              | 4 vCPU            |
-
----
-
-## 🎯 Objective  
-To install and verify the essential tools required for the **RISC-V SoC Tapeout project**:  
-- **Icarus Verilog (iverilog)**  
-- **GTKWave**  
-- **Yosys**  
 
 ---
 
