@@ -7,19 +7,6 @@ To summarize the concepts learned from the introductory video on **Digital VLSI 
 
 ## 📖 Key Learnings
 
-## 📖 VLSI SoC Design Flow  
-
-| **Stage** | **Output / Label** | **Description** |
-|-----------|--------------------|-----------------|
-| 📝 **C Modeling** | O,1 | - Begin with **Spec C model**.<br>- Compare with **GCC output (O,0)**.<br>- Use a **C testbench** as application driver.<br>- Ensure GCC output = Spec C model output. |
-| ⚙️ **RTL Design** | O,2 | - Convert C model into **Verilog RTL**.<br>- RTL is the **soft copy of hardware**.<br>- Validate: Spec C model = RTL output. |
-| 🖥️ **SoC Integration** | O,3 | - Integrate **Processor + Peripherals + GPIOs**.<br>- Includes **synthesizable macros** & **Analog IPs**.<br>- PLLs / clock multipliers adjust internal speeds.<br>- Verification: RTL (O,2) = SoC (O,3). |
-| 🏗️ **Physical Design (RTL → GDSII)** | — | - Back-end flow steps:<br>  • Floorplanning<br>  • Placement<br>  • Clock Tree Synthesis (CTS)<br>  • Routing<br>- Processors = soft logic; Macros & Analog IPs = **Hard Macros**. |
-| 🏭 **Tapeout & Fabrication** | O,4 | - Output = **GDSII file**.<br>- Perform **DRC (Design Rule Check)** & **LVS (Layout vs Schematic)**.<br>- **Tape-out** → send GDSII to fab.<br>- **Tape-in** → receive fabricated silicon chip. |
-| ✅ **Verification at Each Stage** | — | - Always check equivalence between outputs:<br>O,0 = O,1 = O,2 = O,3 = O,4. |
-| ⏱️ **Operating Frequency** | — | - Typical analysis range: **100 MHz – 130 MHz**. |
-
-
 ### 1. Chip Modeling
 - The process begins with **C models**:
   - **GCC output (O,0)** and **Spec C model (O,1)** are compared.
@@ -99,6 +86,17 @@ From Verilog RTL, the flow branches into two main parts:
 - **100 MHz to 130 MHz**.
 
 ---
+## 📖 VLSI SoC Design Flow - Summary
+
+| **Stage** | **Output / Label** | **Description** |
+|-----------|--------------------|-----------------|
+| 📝 **C Modeling** | O,1 | - Begin with **Spec C model**.<br>- Compare with **GCC output (O,0)**.<br>- Use a **C testbench** as application driver.<br>- Ensure GCC output = Spec C model output. |
+| ⚙️ **RTL Design** | O,2 | - Convert C model into **Verilog RTL**.<br>- RTL is the **soft copy of hardware**.<br>- Validate: Spec C model = RTL output. |
+| 🖥️ **SoC Integration** | O,3 | - Integrate **Processor + Peripherals + GPIOs**.<br>- Includes **synthesizable macros** & **Analog IPs**.<br>- PLLs / clock multipliers adjust internal speeds.<br>- Verification: RTL (O,2) = SoC (O,3). |
+| 🏗️ **Physical Design (RTL → GDSII)** | — | - Back-end flow steps:<br>  • Floorplanning<br>  • Placement<br>  • Clock Tree Synthesis (CTS)<br>  • Routing<br>- Processors = soft logic; Macros & Analog IPs = **Hard Macros**. |
+| 🏭 **Tapeout & Fabrication** | O,4 | - Output = **GDSII file**.<br>- Perform **DRC (Design Rule Check)** & **LVS (Layout vs Schematic)**.<br>- **Tape-out** → send GDSII to fab.<br>- **Tape-in** → receive fabricated silicon chip. |
+| ✅ **Verification at Each Stage** | — | - Always check equivalence between outputs:<br>O,0 = O,1 = O,2 = O,3 = O,4. |
+
 
 ## ✅ Outcome
 - Learned the **entire SoC design cycle** from **C model → RTL → SoC Integration → GDSII → Tapeout → Fabrication**.  
