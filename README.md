@@ -22,7 +22,6 @@ This repository captures **Week 0 tasks**, including learning summaries and tool
 ## 📑 Table of Contents
 - [Tasks for Week 0](#-tasks-for-week-0)
 - [Repository Structure](#-repository-structure)
-- [Quick Commands](#-quick-commands)
 - [Next Steps](#-next-steps)
 - [Credits & Acknowledgments](#-credits--acknowledgments)
 
