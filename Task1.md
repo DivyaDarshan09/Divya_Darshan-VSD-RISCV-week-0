@@ -7,38 +7,17 @@ To summarize the concepts learned from the introductory video on **Digital VLSI 
 
 ## 📖 Key Learnings
 
-flowchart TD
-    subgraph Stage1 [📦 C Modeling (O,1)]
-        A1[Spec C Model]
-        A2[GCC Output (O,0)]
-        A3[Testbench in C]
-    end
+## 📖 VLSI SoC Design Flow  
 
-    subgraph Stage2 [📦 RTL Design (O,2)]
-        B1[RTL in Verilog]
-        B2[Validation vs C Model]
-    end
-
-    subgraph Stage3 [📦 SoC Integration (O,3)]
-        C1[Processor]
-        C2[Peripherals & IPs]
-        C3[GPIOs]
-    end
-
-    subgraph Stage4 [📦 Physical Design → GDSII]
-        D1[Floorplanning]
-        D2[Placement]
-        D3[CTS]
-        D4[Routing]
-    end
-
-    subgraph Stage5 [📦 Tapeout & Fabrication (O,4)]
-        E1[DRC & LVS]
-        E2[Tape-out → GDSII]
-        E3[Tape-in → Fabricated Chip]
-    end
-
-    Stage1 --> Stage2 --> Stage3 --> Stage4 --> Stage5
+| **Stage** | **Output / Label** | **Description** |
+|-----------|--------------------|-----------------|
+| 📝 **C Modeling** | O,1 | - Begin with **Spec C model**.<br>- Compare with **GCC output (O,0)**.<br>- Use a **C testbench** as application driver.<br>- Ensure GCC output = Spec C model output. |
+| ⚙️ **RTL Design** | O,2 | - Convert C model into **Verilog RTL**.<br>- RTL is the **soft copy of hardware**.<br>- Validate: Spec C model = RTL output. |
+| 🖥️ **SoC Integration** | O,3 | - Integrate **Processor + Peripherals + GPIOs**.<br>- Includes **synthesizable macros** & **Analog IPs**.<br>- PLLs / clock multipliers adjust internal speeds.<br>- Verification: RTL (O,2) = SoC (O,3). |
+| 🏗️ **Physical Design (RTL → GDSII)** | — | - Back-end flow steps:<br>  • Floorplanning<br>  • Placement<br>  • Clock Tree Synthesis (CTS)<br>  • Routing<br>- Processors = soft logic; Macros & Analog IPs = **Hard Macros**. |
+| 🏭 **Tapeout & Fabrication** | O,4 | - Output = **GDSII file**.<br>- Perform **DRC (Design Rule Check)** & **LVS (Layout vs Schematic)**.<br>- **Tape-out** → send GDSII to fab.<br>- **Tape-in** → receive fabricated silicon chip. |
+| ✅ **Verification at Each Stage** | — | - Always check equivalence between outputs:<br>O,0 = O,1 = O,2 = O,3 = O,4. |
+| ⏱️ **Operating Frequency** | — | - Typical analysis range: **100 MHz – 130 MHz**. |
 
 
 ### 1. Chip Modeling
