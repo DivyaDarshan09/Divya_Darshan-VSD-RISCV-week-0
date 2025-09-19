@@ -7,13 +7,39 @@ To summarize the concepts learned from the introductory video on **Digital VLSI 
 
 ## 📖 Key Learnings
 
-```mermaid
 flowchart TD
-    A[C Model (O,1)] --> B[RTL in Verilog (O,2)]
-    B --> C[SoC Integration (O,3)]
-    C --> D[Physical Design → GDSII]
-    D --> E[Tapeout → Tapein → Fabricated Chip (O,4)]
-```
+    subgraph Stage1 [📦 C Modeling (O,1)]
+        A1[Spec C Model]
+        A2[GCC Output (O,0)]
+        A3[Testbench in C]
+    end
+
+    subgraph Stage2 [📦 RTL Design (O,2)]
+        B1[RTL in Verilog]
+        B2[Validation vs C Model]
+    end
+
+    subgraph Stage3 [📦 SoC Integration (O,3)]
+        C1[Processor]
+        C2[Peripherals & IPs]
+        C3[GPIOs]
+    end
+
+    subgraph Stage4 [📦 Physical Design → GDSII]
+        D1[Floorplanning]
+        D2[Placement]
+        D3[CTS]
+        D4[Routing]
+    end
+
+    subgraph Stage5 [📦 Tapeout & Fabrication (O,4)]
+        E1[DRC & LVS]
+        E2[Tape-out → GDSII]
+        E3[Tape-in → Fabricated Chip]
+    end
+
+    Stage1 --> Stage2 --> Stage3 --> Stage4 --> Stage5
+
 
 ### 1. Chip Modeling
 - The process begins with **C models**:
