@@ -33,7 +33,7 @@ sudo apt-get install iverilog
 ```
 ---
 ### 🔹 Terminal Output 
-![alt text](<WhatsApp Image 2025-09-19 at 17.35.52_cb282210.jpg>)
+![iverilog Screenshot](.Screenshots/iverilog.jpg)
 
 ## 2️⃣ Installing GTKWave  
 
@@ -44,7 +44,7 @@ sudo apt install gtkwave
 ```
 ---
 ### 🔹 Terminal Output
-![alt text](<WhatsApp Image 2025-09-19 at 17.35.59_98968142.jpg>)
+![GTKWave Screenshot](.Screenshots/gtkwave.jpg)
 
 ## 3️⃣ Installing Yosys  
 
@@ -64,7 +64,7 @@ $ sudo make install
 ```
 ---
 ### 🔹 Terminal Output
-![alt text](<WhatsApp Image 2025-09-19 at 18.09.10_8b7fe480.jpg>)
+![Yosys Screenshot](.Screenshots/yosys.jpg)
 
 
 
@@ -72,3 +72,6 @@ $ sudo make install
 ## ✅ Outcome  
 - Installed and verified: **Icarus Verilog**, **GTKWave**, and **Yosys**.  
 - Tools are ready for **simulation, waveform analysis, and synthesis**.  
+
+
+
